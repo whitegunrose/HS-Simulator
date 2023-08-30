@@ -11,15 +11,15 @@
 #   - Attributes: Name (str), Is Friendly (bool), Good Instructor (bool)
 #   - Methods: GiveHomework, GiveTests, GradeWork (both tests and homework)
 
-# - Courses:
+# - Course:
 #   - Attributes: Course Name (str), Honors/AP (bool), A-G Requirement (bool) --> Means elective or non/elective
 #   - Methods: ApplyStudentGrade, AddCourse, DropCourse
 
 class Student():
   def __init__(self, name, year = 1):  # Default freshman if school year isn't supplied
     self.name = name
-    self.grades = []
     self.year = year
+    self.reportCard = {}  # SYNTAX: {Class Name: Class Grade (A-F, NO NUMBERS, +, OR -)}
 
   def __repr__(self):
 
@@ -51,16 +51,45 @@ class Teacher():
     return f"Hello, {self.name}. Welcome to your class!"
 
 
-class Courses():
-  def __init__(self):
-    pass
+class Course():
+  def __init__(self, name, advanced = False, ge = True):  # Default non-Honors/AP class and default A-G required class
+    self.courseName = name
+    self.advancedClass = advanced
+    self.genEd = ge
+
+  def __repr__(self):
+    message = f"You chose the {self.courseName} class. "
+
+    match self.advancedClass:
+      case True:
+        
+        match self.genEd:
+          case True:
+            message += f"This is an advanced course, and it fulfills one of your A-G requirements."
+          
+          case False:
+            message += f"This is an advanced course, and it does not fulfill one of your A-G requirements."
+      
+      case False:
+        
+        match self.genEd:
+          case True:
+            message += f"This is not an advanced course, and it fulfills one of your A-G requirements."
+          
+          case False:
+            message += f"This is not advanced course, and it does not fulfill one of your A-G requirements."
+
+    return message
   
 
 # Test instances
 
 BRANDON = Student("Dzrk")
 mrMercado = Teacher("Mr. Mercado")
-schedule = Courses()
+testClass = Course("Computer Science", True, False)
 
+print()
 print(BRANDON)
 print(mrMercado)
+print(testClass)
+print()
