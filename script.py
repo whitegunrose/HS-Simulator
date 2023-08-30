@@ -14,3 +14,32 @@
 # - Courses:
 #   - Attributes: Course Name (str), Honors/AP (bool), A-G Requirement (bool) --> Means elective or non/elective
 #   - Methods: ApplyStudentGrade, AddCourse, DropCourse
+
+class Student():
+  def __init__(self, name):
+    self.name = name
+
+  def __repr__(self):
+    return f"Hello, {self.name}. Welcome to high school!"
+
+class Teacher():
+  def __init__(self, name):
+    self.name = name
+
+  def __repr__(self):
+    return f"Hello, {self.name}. Welcome to your class!"
+
+
+class Courses():
+  def __init__(self):
+    pass
+  
+
+# Test instances
+
+BRANDON = Student("Dzrk")
+mrMercado = Teacher("Mr. Mercado")
+schedule = Courses()
+
+print(BRANDON)
+print(mrMercado)
