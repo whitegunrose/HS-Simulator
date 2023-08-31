@@ -1,13 +1,17 @@
 from classes import *
-
+from functions import *
 # Going to create a high-school simulator
 # Classes will include: Student, Teacher, Courses in classes.py file
+# Functions will include: Register (for school), IN PROGRESS!!
 
 # Test instances
 
 BRANDON = Student("Dzrk")
 mrMercado = Teacher("Mr. Mercado")
 testClass = Course("Computer Science", True, False)
+
+introduction()
+
 
 print()
 print(BRANDON)
