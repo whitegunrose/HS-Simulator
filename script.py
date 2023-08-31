@@ -14,3 +14,8 @@ print(BRANDON)
 print(mrMercado)
 print(testClass)
 print()
+
+print(testClass.addTo(BRANDON))
+print()
+print(BRANDON.schedule)
+print(BRANDON.reportCard)

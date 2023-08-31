@@ -1,7 +1,7 @@
 # 3 attributes and 3 methods for each class
 
 # - Student:
-#   - Attributes: Name (str), Grades (list), Year (int)
+#   - Attributes: Name (str), Year (int), Schedule (List), Report Card (Dictionary)
 #   - Methods: GoToClass, DoHomework, TakeTest
 
 # - Teacher:
@@ -10,13 +10,14 @@
 
 # - Course:
 #   - Attributes: Course Name (str), Honors/AP (bool), A-G Requirement (bool) --> Means elective or non/elective
-#   - Methods: ApplyStudentGrade, AddCourse, DropCourse
+#   - Methods: ApplyStudentGrade, AddTo, DropFrom (Add to student report car, drop from student report card)
 
 
 class Student():
   def __init__(self, name, year = 1):  # Default freshman if school year isn't supplied
     self.name = name
     self.year = year
+    self.schedule = []    # Will contain a list of the student's class schedule
     self.reportCard = {}  # SYNTAX: {Class Name: Class Grade (A-F, NO NUMBERS, +, OR -)}
 
   def __repr__(self):
@@ -79,3 +80,8 @@ class Course():
 
     return message
   
+  def addTo(self, stuName):
+    stuName.schedule.append(self.courseName)
+    stuName.reportCard[self.courseName] = "N/A"  # N/A indicating an empty grade yet to be determined.
+
+    return f"You are adding {self.courseName} to {stuName.name}'s schedule and report card."
