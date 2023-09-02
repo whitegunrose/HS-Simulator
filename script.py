@@ -6,17 +6,11 @@ from functions import *
 
 # Test instances
 
-BRANDON = Student("Dzrk")
+"""BRANDON = Student("Dzrk")
 mrMercado = Teacher("Mr. Mercado")
 testClass = Course("Computer Science", True, False)
 
-introduction()
-
-stuName = input("Please enter your first and last name: ")
-
-create_student(stuName)
-
-"""print(BRANDON)
+print(BRANDON)
 print(mrMercado)
 print(testClass)
 print()
@@ -25,3 +19,23 @@ print(testClass.addTo(BRANDON))
 print()
 print(BRANDON.schedule)
 print(BRANDON.reportCard)"""
+
+
+# Start of program execution
+
+if __name__ == "__main__":
+
+    options = {
+
+        "R" : "Show Report Card",
+        "S" : "Show Schedule",
+        "A" : "Add Class",
+        "D" : "Drop Class"
+
+    }
+
+    introduction()
+    stuName = input("Please enter your first and last name: ")
+    student = create_student(stuName)
+
+    

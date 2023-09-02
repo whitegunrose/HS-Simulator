@@ -30,29 +30,17 @@ def create_student(name, year = 1):
     print("Click enter to continue...")
     input()
 
+    return newStuObj
 
 
-# Commented out function
-"""def register(stuName, stuYear = 1):
-    sentence = f"{stuName} is being registered here at J.R.O. High School for their "
-
-    match stuYear:
-        case 1:
-            sentence += "1st year as an incoming freshman."
-
-        case 2:
-            sentence += "2nd year as a sophomore."
-
-        case 3:
-            sentence += "3rd year as a junior."
-
-        case 4:
-            sentence += "4th year as a senior."
-
-    print(sentence)
-
-    stuObj = Student(stuName, stuYear)
-    print("The student can now be accessed under the object {name}".format(name = stuName))
-    return stuObj"""
+def printOptions(list):
 
     
+    print("=========================\n")
+
+    print("What would you like to do next?")
+
+    for action in list:
+        print(f"{action} - list{action}")   
+
+    print("\n=========================")
