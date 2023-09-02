@@ -1,6 +1,17 @@
 from classes import *
 import os
 
+import time
+# After 30 seconds of the program executing, a message will appear notifying
+# the student that their first class is starting. Need threading and time modules
+
+def first_class_countdown():
+    for num in range(3, 0, -1):
+        print("...")
+        time.sleep(1)
+    
+    print("\nRing! Ring! Ring! Your first class is starting soon!")
+
 
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -33,14 +44,14 @@ def create_student(name, year = 1):
     return newStuObj
 
 
-def printOptions(list):
+def printOptions(options):
 
     
     print("=========================\n")
 
-    print("What would you like to do next?")
+    print("What would you like to do next?\n")
 
-    for action in list:
-        print(f"{action} - list{action}")   
+    for action in options:
+        print(f"{action} - {options[action]}")   
 
     print("\n=========================")
