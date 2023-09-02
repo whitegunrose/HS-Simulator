@@ -42,9 +42,25 @@ if __name__ == "__main__":
 
     }
 
+    class_list = [
+        
+        "Math 1: Algebra", 
+        "Science: Living Earth Sciences",
+        "History: World History",
+        "English 1: Reading and Writing Composition"
+        
+    ]
+
     introduction()
     stuName = input("Please enter your first and last name: ")
+    clear_terminal()
     student = create_student(stuName)
+
+    clear_terminal()
+    register_classes(student, class_list)
+
+    print(student.schedule)
+    print(student.reportCard)
 
     # Before sending the student to his first class, we need to get him 
     # registered into classes
