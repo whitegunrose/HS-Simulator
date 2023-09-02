@@ -12,9 +12,11 @@ testClass = Course("Computer Science", True, False)
 
 introduction()
 
+stuName = input("Please enter your first and last name: ")
 
-print()
-print(BRANDON)
+create_student(stuName)
+
+"""print(BRANDON)
 print(mrMercado)
 print(testClass)
 print()
@@ -22,4 +24,4 @@ print()
 print(testClass.addTo(BRANDON))
 print()
 print(BRANDON.schedule)
-print(BRANDON.reportCard)
+print(BRANDON.reportCard)"""
