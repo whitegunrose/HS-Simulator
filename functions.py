@@ -107,10 +107,23 @@ def register_classes(student, class_list):
 
         case "ALL":
             print("\nYou chose All")
-            # FINISH ADDING ALL CLASSES
+
+            for class_name in class_list:
+                student.schedule.append(class_name)
+                student.reportCard[class_name.split(':')[1]] = "N/A"
+
 
         case _:
             print("Invalid selection. Click enter to try again...")
             input()
             clear_terminal()
             register_classes(student, class_list)
+
+    if len(student.schedule) < 4:
+        print("You're a couple of classes short. To add more, click enter... ")
+        input()
+        clear_terminal()
+        register_classes(student, class_list)
+    else:
+        time.sleep(2)
+        print("\nGreat, you're all set!\n")

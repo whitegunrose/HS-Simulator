@@ -59,8 +59,8 @@ if __name__ == "__main__":
     clear_terminal()
     register_classes(student, class_list)
 
-    print(student.schedule)
-    print(student.reportCard)
+    first_class = student.schedule[0].split(":")[0]
+    # Saving name of student's first class to separate variable
 
     # Before sending the student to his first class, we need to get him 
     # registered into classes
@@ -72,6 +72,6 @@ if __name__ == "__main__":
 
     while True:
         if not countdown_thread.is_alive():
-            input()
+            time.sleep(2)
             printOptions(actions)
             break
