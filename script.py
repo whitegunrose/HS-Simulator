@@ -38,7 +38,7 @@ if __name__ == "__main__":
     actions = {
 
         "G" : "Go To Class",
-        "Sk" : "Skip Class"
+        "S" : "Skip Class"
 
     }
 
@@ -59,13 +59,13 @@ if __name__ == "__main__":
     clear_terminal()
     register_classes(student, class_list)
 
-    first_class = student.schedule[0].split(":")[0]
-    # Saving name of student's first class to separate variable
+    # Saving name of student's classes to separate variable
 
-    # Before sending the student to his first class, we need to get him 
-    # registered into classes
-    # IMPLEMENT ADDING CLASSES TO THE STUDENT'S SCHEDULE!!!!!!!!!!!
-
+    first_class = student.schedule[0].split(":")[1]
+    second_class = student.schedule[1].split(":")[1]
+    third_class = student.schedule[2].split(":")[1]
+    fourth_class = student.schedule[3].split(":")[1]
+    
     # Creating a countdown for student's first class bell
     countdown_thread = threading.Thread(target=first_class_countdown)
     countdown_thread.start()
@@ -75,3 +75,9 @@ if __name__ == "__main__":
             time.sleep(2)
             printOptions(actions)
             break
+    
+    print()
+    print()
+
+    answer = grab_action(actions)
+    attend_class(student.name, first_class, answer)

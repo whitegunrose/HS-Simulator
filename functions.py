@@ -9,6 +9,7 @@ def first_class_countdown():
     for num in range(3, 0, -1):
         print("...")
         time.sleep(1)
+    clear_terminal()
     
     print("\nRing! Ring! Ring! Your first class is starting soon!")
 
@@ -127,3 +128,29 @@ def register_classes(student, class_list):
     else:
         time.sleep(2)
         print("\nGreat, you're all set!\n")
+
+def attend_class(stuName, className, decision):
+
+    # Make branch statements based on the answer of student's action
+    # If decision = G: go to class, start class
+    # If decision  = S: skip class, ask again until student says go to class
+    pass
+
+
+def grab_action(options):
+    
+    # I recognize having these two parameters is bad practice but
+    # I know what it means
+
+    next = input("Enter option here: ")
+
+    if next.upper() in options.keys():
+        return next.upper()
+    else:
+        print("Invalid entry. Try again")
+        time.sleep(1)
+        clear_terminal()
+        printOptions(options)
+        grab_action(options)
+        
+    time.sleep(1)
