@@ -24,7 +24,7 @@ class Student():
 
     match self.year:
       case 1: 
-        return f"Welcome to high school, {self.name}! This is your first year in high school, so you're a freshman, enjoy your time!" 
+        return f"Welcome to high school, {self.name}! This is your first year in high school, so you're a freshman. Enjoy your time!" 
       
       case 2:
         return f"Welcome back, {self.name}! We hope you enjoyed your freshman year, and we hope you enjoy your new sophomore year even more."

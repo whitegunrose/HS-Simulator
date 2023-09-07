@@ -80,4 +80,4 @@ if __name__ == "__main__":
     print()
 
     answer = grab_action(actions)
-    attend_class(student.name, first_class, answer)
+    attend_class(student.name, first_class, answer, actions)

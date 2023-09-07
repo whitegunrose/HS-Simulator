@@ -101,7 +101,7 @@ def register_classes(student, class_list):
             student.schedule.append(class_list[2])
             student.reportCard[class_list[2].split(':')[1]] = "N/A"
 
-        case "ENGLISH":
+        case "ENGLISH 1":
             print("\nYou chose English")
             student.schedule.append(class_list[3])
             student.reportCard[class_list[3].split(':')[1]] = "N/A"
@@ -129,18 +129,23 @@ def register_classes(student, class_list):
         time.sleep(2)
         print("\nGreat, you're all set!\n")
 
-def attend_class(stuName, className, decision):
+def attend_class(stuName, className, decision, options):
 
     # Make branch statements based on the answer of student's action
     # If decision = G: go to class, start class
     # If decision  = S: skip class, ask again until student says go to class
-    pass
+    if decision == "S":
+        print("Ooh. Good try but, better luck next time :)")
+        time.sleep(1)
+        clear_terminal()
+        printOptions(options)
+        new_ans = grab_action(options)
+        attend_class(stuName, className, new_ans, options)
+    else:
+        print("Test case: You made it here.")
 
 
 def grab_action(options):
-    
-    # I recognize having these two parameters is bad practice but
-    # I know what it means
 
     next = input("Enter option here: ")
 
@@ -154,3 +159,4 @@ def grab_action(options):
         grab_action(options)
         
     time.sleep(1)
+    return next
