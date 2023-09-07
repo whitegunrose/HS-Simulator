@@ -142,7 +142,22 @@ def attend_class(stuName, className, decision, options):
         new_ans = grab_action(options)
         attend_class(stuName, className, new_ans, options)
     else:
-        print("Test case: You made it here.")
+        course = Course(className)
+        print(course)
+        time.sleep(5)
+
+        # There are going to be different teachers for every class
+        # Write a match switch to assign teacher a different name
+        # depending on what className is
+
+        teacher = Teacher("Mr. Krabs")
+        start_class(stuName, teacher, course)
+
+
+def start_class(stuName, teacher, course):
+    clear_terminal()
+    time.sleep(1)
+    print(teacher)
 
 
 def grab_action(options):

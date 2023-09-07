@@ -12,7 +12,7 @@
 #   - Attributes: Course Name (str), Honors/AP (bool), A-G Requirement (bool) --> Means elective or non/elective
 #   - Methods: ApplyStudentGrade, AddTo, DropFrom (Add to student report car, drop from student report card)
 
-
+import time
 class Student():
   def __init__(self, name, year = 1):  # Default freshman if school year isn't supplied
     self.name = name
@@ -47,7 +47,7 @@ class Teacher():
     self.good_instructor = good_instructor
 
   def __repr__(self):
-    return f"Hello, {self.name}. Welcome to your class!"
+    return f"Hello everyone, my name is {self.name}. Welcome to my class!"
 
 
 class Course():
@@ -59,6 +59,7 @@ class Course():
   def __repr__(self):
     message = f"You chose the {self.courseName} class. "
 
+    time.sleep(1)
     match self.advancedClass:
       case True:
         
