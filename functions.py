@@ -102,7 +102,7 @@ def register_classes(student, class_list):
             student.reportCard[class_list[2].split(':')[1]] = "N/A"
 
         case "ENGLISH 1":
-            print("\nYou chose English")
+            print("\nYou chose English 1")
             student.schedule.append(class_list[3])
             student.reportCard[class_list[3].split(':')[1]] = "N/A"
 
