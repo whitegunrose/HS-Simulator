@@ -150,7 +150,21 @@ def attend_class(stuName, className, decision, options):
         # Write a match switch to assign teacher a different name
         # depending on what className is
 
-        teacher = Teacher("Mr. Krabs")
+        match className.upper():
+            case "ALGEBRA":
+                teacher = Teacher("Mrs. Harper")
+
+            case "LIVING EARTH SCIENCES":
+                teacher = Teacher("Dr. Evelyn")
+
+            case "WORLD HISTORY":
+                teacher = Teacher("Mr. Winston", True, False)
+                # History teachers tend to be the friendliest, with the 
+                # most lenience on grades ans assignments
+
+            case "READING AND WRITING COMPOSITION":
+                teacher = Teacher("Dr. Olivia", False, True)
+
         start_class(stuName, teacher, course)
 
 
