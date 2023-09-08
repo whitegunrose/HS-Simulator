@@ -57,7 +57,7 @@ class Course():
     self.genEd = ge
 
   def __repr__(self):
-    message = f"You chose the {self.courseName} class. "
+    message = f"Welcome to {self.courseName}. "
 
     time.sleep(1)
     match self.advancedClass:
