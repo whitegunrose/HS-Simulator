@@ -14,6 +14,15 @@ def first_class_countdown():
     print("\nRing! Ring! Ring! Your first class is starting soon!")
 
 
+def print_sentence_effect(sentence):
+    
+    words = sentence.split()
+
+    for word in words:
+        print(word, end=' ', flush=True)
+        time.sleep(0.5)
+
+
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -172,6 +181,12 @@ def start_class(stuName, teacher, course):
     clear_terminal()
     time.sleep(1)
     print(teacher)
+    # print_sentence_effect("This is a test case.") Maybe use this if you want to be fancy
+
+    # THINK ABOUT WHAT TO DO NEXT IN CLASS
+    # GIVE ASSIGNMENTS?
+    # TELL USER A LECTURE IS HAPPENING?
+    # MEET FRIENDS?
 
 
 def grab_action(options):
