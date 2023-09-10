@@ -118,9 +118,18 @@ def register_classes(student, class_list):
         case "ALL":
             print("\nYou chose All")
 
-            for class_name in class_list:
-                student.schedule.append(class_name)
-                student.reportCard[class_name.split(':')[1]] = "N/A"
+            if len(student.schedule) == 0 and len(student.reportCard) == 0:
+                for class_name in class_list:
+                    student.schedule.append(class_name)
+                    student.reportCard[class_name.split(':')[1]] = "N/A"
+
+            elif len(student.schedule) < 4:
+                for class_name in class_list:
+                    if class_name not in student.schedule:
+                        student.schedule.append(class_name)
+                        student.reportCard[class_name.split(':')[1]] = "N/A"
+
+
 
 
         case _:
