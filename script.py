@@ -82,3 +82,6 @@ if __name__ == "__main__":
     answer = grab_action(actions)
     clear_terminal()
     attend_class(student.name, first_class, answer, actions)
+    attend_class(student.name, second_class, answer, actions)
+    attend_class(student.name, third_class, answer, actions)
+    attend_class(student.name, fourth_class, answer, actions)
