@@ -81,6 +81,10 @@ if __name__ == "__main__":
 
     answer = grab_action(actions)
     clear_terminal()
+
+    # FIX THIS: Grab new action and ask if they want to go to next class
+    #           Present option to go to lunch before third class
+    #           Ask if they want to hang out with friends after fourth class
     attend_class(student.name, first_class, answer, actions)
     attend_class(student.name, second_class, answer, actions)
     attend_class(student.name, third_class, answer, actions)
