@@ -192,12 +192,19 @@ def start_class(stuName, teacher, course):
     print(teacher)
     # print_sentence_effect("This is a test case.") Maybe use this if you want to be fancy
 
+    time.sleep(2)
+    
+    print(f"{teacher.name} is going to be lecturing for the next hour...")
     # THINK ABOUT WHAT TO DO NEXT IN CLASS
     # GIVE ASSIGNMENTS?
     # TELL USER A LECTURE IS HAPPENING?
     # MEET FRIENDS?
 
+    for num in range(3, 0, -1):
+        print("...")
+        time.sleep(1)
 
+    print("Class is now over! Enjoy the rest of your day, kids!")
 def grab_action(options):
 
     next = input("Enter option here: ")
