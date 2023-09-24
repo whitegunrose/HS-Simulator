@@ -89,3 +89,5 @@ if __name__ == "__main__":
     attend_class(student.name, second_class, answer, actions)
     attend_class(student.name, third_class, answer, actions)
     attend_class(student.name, fourth_class, answer, actions)
+    # This is where i got lazy and hit a creative roadblock.
+    # I temporarily have the student go throughout his day in an instant
